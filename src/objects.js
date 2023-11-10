@@ -13,7 +13,14 @@
 //     { firstName: 'Karlach', lastName: 'Cliffgate', location: 'Avernus' }
 //   ]);
 //   => ['Gale Dekarios', 'Wyll Ravengard', 'Karlach Cliffgate'];
-function getNames(people) {}
+
+function getNames(people) {
+  let newArr = []
+  for (const person of people) {
+    newArr.push(`${person.firstName} ${person.lastName}`)
+  }
+  return newArr
+}
 
 // Given an object representing a person, return their full name (first name and last name).
 // You MUST use object destructuring in your solution.
@@ -24,7 +31,12 @@ function getNames(people) {}
 // Ex.:
 //   getName({ firstName: 'Gale', lastName: 'Dekarios', location: 'Waterdeep' });
 //   => 'Gale Dekarios'
-function getNameUsingDestructuring(person) {}
+
+function getNameUsingDestructuring(person) {
+  const { firstName, lastName } = person
+  const fullName = `${firstName} ${lastName}`
+  return fullName
+}
 
 // Given an array of objects representing people, return a new array of the
 // people matching the given location.
@@ -43,7 +55,22 @@ function getNameUsingDestructuring(person) {}
 //     { firstName: 'Wyll', lastName: 'Ravengard', location: "Baldur's Gate" },
 //     { firstName: 'Astarion', lastName: 'Ancunin', location: "Baldur's Gate" }
 //   ];
-function getPeopleByLocation(people, location) {}
+getPeopleByLocation([
+  { firstName: 'Gale', lastName: 'Dekarios', location: 'Waterdeep' },
+  { firstName: 'Wyll', lastName: 'Ravengard', location: "Baldur's Gate" },
+  { firstName: 'Karlach', lastName: 'Cliffgate', location: 'Avernus' },
+  { firstName: 'Astarion', lastName: 'Ancunin', location: "Baldur's Gate" }
+], "Baldur's Gate");
+
+function getPeopleByLocation(people, location) {
+const newArr = [];
+for (const person of people) {
+  if (person.location === location) {
+    newArr.push(person)
+  }
+}
+return newArr;
+}
 
 // Translate a phrase to pirate talk.
 //
@@ -72,8 +99,15 @@ const EN_PIRATE_LOOKUP = {
   hello: 'ahoy',
 };
 
-function translateToPirateTalk(phrase) {}
-
+function translateToPirateTalk(phrase) {
+  const translation = '';
+  for (i=0; i < phrase.length; i++) {
+    if(EN_PIRATE_LOOKUP.excuse === phrase[i]) {
+      translation += EN_PIRATE_LOOKUP.excuse
+    } else if (EN_PIRATE_LOOKUP.sir === phrase[i]) {
+}
+}
+}
 // Return the number of occurrences of each word in a string.
 // This function doesn't handle punctuation and is case-sensitive, so you can
 // count 'hello!', 'hello', and 'Hello' as different words.

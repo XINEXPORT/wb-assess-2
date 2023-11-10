@@ -8,7 +8,21 @@
 // update and say "Log out". If a user clicks on the button again, its text
 // should switch from "Log Out" to "Log In".
 
-/// TODO: replace this with your code
+function loginButton() {
+    const loginButton = evt.target;
+    targetloginButton.innerText = user;
+    if (user==='Login') {
+        user='Log Out';
+    }else{
+        user='Login';
+    }
+    }
+
+const loginButton=document.querySelectorAll ('.auth');
+
+for (const button of loginButton){
+    loginButton.addEventListener('click', play);
+}
 
 // Send an alert
 //
@@ -34,7 +48,7 @@
 //     <li>Item</li>  <!-- This was added after double-clicking -->
 //   </ol>
 
-/// TODO: replace this with your code
+doc
 
 // Change colors
 //

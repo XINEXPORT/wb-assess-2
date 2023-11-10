@@ -6,7 +6,7 @@ body {
 
 
 table{
-    margin-top:3%;
+    margin-top:50px;
     margin-left: 1%;
     border: 1px solid white;
 }
@@ -22,7 +22,6 @@ td{
 }
 
 thead{
-    margin-top: 50px;
     padding: 5px;
 }
 
@@ -37,6 +36,3 @@ select{
     border-width: 4px;
 }
 
-span{
-    width: 70%;
-}
