@@ -87,8 +87,8 @@ redBtn.addEventListener('click', evt => {
 });
  
 const changeColors = (color) =>{
-    for (let i of colorChange) {
-        i.style.color = color;
+    for (let node of colorChange) {
+        node.style.color = color;
     }
 }
 
@@ -140,9 +140,6 @@ const changeColors = (color) =>{
 // // the feedback text to say "The word must be at least 4 characters long." and
 // // change the color of the text to red..
 
-// let wordFrm = document.getElementById("recommend-word");
-// let wordInput = document.getElementById("word");
-// let feedbackText = document.querySelector(".form-feedback");
 
 const recWord = document.getElementById("recommend-word");
 const wordInput = document.getElementById("word");

@@ -5,10 +5,12 @@
 // Ex.:
 //   giveMeTwo();
 //   => 2
-const giveMeTwo =()=>{
-    return 2;
-    };
-  giveMeTwo();
+
+// giveMeTwo();
+// console.log(giveMeTwo());
+
+const giveMeTwo = () =>  2;
+giveMeTwo();
 
 // Set the value of addNums to an arrow function that takes in two numbers and
 // returns their sum.
@@ -25,7 +27,7 @@ const addNums = (num1, num2) => {return num1 + num2};
 //   max(1, 2);
 //   => 2
 const max = (num1, num2) => {if (num1 <= num2) return num2; else return false};
-const result = max(5,8)
+const result = max(5,8);
 
 // Note: you can also do this on one line:
 // const max = (a, b) => (a >= b ? a : b);
@@ -53,7 +55,7 @@ function evenNumbers(){
 //   => ['Hello, Clive!', 'Hello, Jill!', 'Hello, Torgal!']
 
 function createGreetings(names) {
-  return names.map(name => 'Hello, ' + name + '!')}
+  return names.map(name => 'Hello, ' + name + '!')};
 
 // Given an array of words, return a new array where each word is uppercased
 // and only includes words that are longer than 4 characters. Do this using
