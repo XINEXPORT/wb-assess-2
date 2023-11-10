@@ -137,7 +137,34 @@ function wordCount(str) {}
 //     }
 //   }, 1);
 //   => true
-function isBugAvailable(bug, month) {}
+
+const bug =  [
+{
+  name: 'common butterfly',
+  availability: {
+    rarity: 'common',
+    months: [9, 10, 11, 12, 1, 2, 3, 4, 5, 6],
+}
+},
+
+{
+  name: 'ladybug',
+  availability: {
+    rarity: 'common',
+    months: [9, 1, 2, 3, 4, 5, 6],
+  
+}
+}
+];
+  
+function isBugAvailable (bug, month) {
+  const currentBug = [];
+    for (i=0; i< bug.length; i++) {
+    if (bug.name === bugs[i].name && bug.availability.months.includes(month)) {
+      currentBug.push(bugs[i].name)
+    }
+  }
+}
 
 // Given an array of objects representing bugs, return an object that'll be
 // used to build a calendar. The keys of the object should be the months of the
