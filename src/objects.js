@@ -62,15 +62,7 @@ getPeopleByLocation([
   { firstName: 'Astarion', lastName: 'Ancunin', location: "Baldur's Gate" }
 ], "Baldur's Gate");
 
-function getPeopleByLocation(people, location) {
-const newArr = [];
-for (const person of people) {
-  if (person.location === location) {
-    newArr.push(person)
-  }
-}
-return newArr;
-}
+function getPeopleByLocation(people, location) {return people.filter(person => person.location === location)};
 
 // Translate a phrase to pirate talk.
 //
@@ -158,12 +150,7 @@ const bug =  [
 ];
   
 function isBugAvailable (bug, month) {
-  const currentBug = [];
-    for (i=0; i< bug.length; i++) {
-    if (bug.name === bugs[i].name && bug.availability.months.includes(month)) {
-      currentBug.push(bugs[i].name)
-    }
-  }
+  return bug.availability.months.includes(month);
 }
 
 // Given an array of objects representing bugs, return an object that'll be
