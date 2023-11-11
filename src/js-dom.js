@@ -107,23 +107,24 @@ const changeColors = (color) =>{
 // //   - calls your function that calculates a factorial
 // //   - puts the result of the function inside the "result" span
 
-// const factorialBtn = document.getElementById("factorial-input");
-// const factorialResult = document.getElementById("result");
-// const factorialCalc = document.getElementById("submit");
+let factForm = document.getElementById("factorial-calculator");
+let factIn = document.getElementById("factorial-input");
+let factCalc = document.getElementById("result");
 
-// factorialBtn.addEventListener('click', evt => {
-//     let num = factorialInput.value;
-//     factorialResult.textContent = factorialCalc(num);
-// })
+factForm.addEventListener('submit', evt => {
+    evt.preventDefault();
+    factCalc.textContent = factorial(factIn.value);
+})
 
-// function factorialCalc () {
-//     let num = factorialInput.value;
-//     let factorial = 1;
-//     for (let i = 1; i <= num; i++) {
-//         factorial = factorial * i;
-//     }
-//     return factorial;
-// }
+const factorial = (num) => {
+    if (num === 0) return 1;
+
+    let result = num;
+    for (let i = 2; i < num; i++) {
+        result *= i;
+    }
+    return result;
+}
 
 // // Validate a form
 // //
