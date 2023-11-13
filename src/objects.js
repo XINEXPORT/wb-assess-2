@@ -92,13 +92,17 @@ const EN_PIRATE_LOOKUP = {
 };
 
 function translateToPirateTalk(phrase) {
-  const translation = '';
-  for (i=0; i < phrase.length; i++) {
-    if(EN_PIRATE_LOOKUP.excuse === phrase[i]) {
-      translation += EN_PIRATE_LOOKUP.excuse
-    } else if (EN_PIRATE_LOOKUP.sir === phrase[i]) {
+  const words = phrase.split('');
+  const newArr = [];
+
+  for (i=0; i < words.length; i++) {
+    if(EN_PIRATE_LOOKUP[words[i]]) {
+      newArr.push (EN_PIRATE_LOOKUP[words[i]]);
+    } else {
+      newArr.push(words[i]);
 }
 }
+return newArr.join(' ');
 }
 // Return the number of occurrences of each word in a string.
 // This function doesn't handle punctuation and is case-sensitive, so you can
