@@ -92,8 +92,8 @@ const EN_PIRATE_LOOKUP = {
 };
 
 function translateToPirateTalk(phrase) {
-  const words = phrase.split('');
-  const newArr = [];
+  let words = phrase.split('');
+  let newArr = [];
 
   for (i=0; i < words.length; i++) {
     if(EN_PIRATE_LOOKUP[words[i]]) {
